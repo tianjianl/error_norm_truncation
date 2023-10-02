@@ -4,7 +4,7 @@
 # module load cuda/11.8.0
 
 echo "now pre-training gpt-2 on wikitext-103, using 4 gpus"
-SAVE_DIR=/scratch4/danielk/tli104/gpt2/baseline-test-clm-el2n-prune-frac-100
+SAVE_DIR=/scratch4/danielk/tli104/gpt2/baseline-test-clm-ent-threshold
 mkdir -p $SAVE_DIR
 accelerate launch run_clm_no_trainer.py \
     --dataset_name wikitext \
@@ -15,6 +15,6 @@ accelerate launch run_clm_no_trainer.py \
     --gradient_accumulation_steps 8 \
     --output_dir $SAVE_DIR \
     --use_token_pruning \
-    --prune_fraction 0.1 \
+    --prune_threshold $1 \
     --num_train_epochs 5  
 

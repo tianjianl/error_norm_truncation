@@ -679,15 +679,9 @@ def main():
                     assert args.prune_threshold * args.prune_fraction == 0, "one of prune_theshold or prune_fraction must be zero!"
                     el2n = compute_el2n(scores, labels, log_probs=True)
                     el2n = el2n.detach()
-                    if args.soft_pruning:
-                        scores = torch.transpose(scores, 1, 2)
-                        loss = loss_fn(scores, labels)
-                        el2n = torch.maximum(el2n, torch.ones_like(el2n))
-                        loss = torch.div(loss, el2n)
-                        loss = loss.mean()
                     
-                    else: #hard pruning
-                        if args.prune_threshold > 0:
+                    else:                         
+			if args.prune_threshold > 0:
                             mask = el2n > args.prune_threshold
                             scores = torch.transpose(scores, 1, 2)
                             loss = loss_fn(scores, labels) # this is of shape (batch size, length)
