@@ -13,12 +13,12 @@ bash train_cnndm.sh
 ## ENT
 ENT-Fraction
 ```
-bash train_cnndm_ent_fraction.sh
+bash train_cnndm_ent_fraction.sh <gpu number> <truncate fraction>
 ```
 
 ENT-threshold
 ```
-bash train_cnndm_ent_threshold.sh
+bash train_cnndm_ent_threshold.sh <gpu number> <truncate threshold>
 ```
 
 
