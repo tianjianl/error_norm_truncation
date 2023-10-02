@@ -16,7 +16,7 @@ bash opus_8_scripts/preprocess_opus_8.sh <vocab_size>
 ```
 
 ## Training 
-To train a baseline model from English to the seven languages (En-X) and do inference on the test set
+To train a baseline model from English to the eight languages (En-X) and do inference on the test set
 ```
 bash train_opus_8_baseline.sh
 ```
