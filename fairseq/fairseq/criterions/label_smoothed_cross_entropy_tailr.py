@@ -38,7 +38,7 @@ def label_smoothed_nll_loss(lprobs, target, epsilon, ignore_index=None, reduce=T
     
     with torch.no_grad(): 
         # this implements https://arxiv.org/abs/2302.13344 
-        weight = torch.div(nll_loss, gamma + (1 - gamma)*nll_loss)
+        weight = torch.div(nll_loss, gamma + (1 - gamma)*np.exp(-nll_loss))
     
     nll_loss *= weight 
     
