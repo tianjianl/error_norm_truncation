@@ -694,7 +694,7 @@ def main():
                     scores = torch.transpose(scores, 1, 2)
                     loss = loss_fn(scores, labels)
                     numerator = loss.detach() 
-                    denominator = args.tailr_gamma + (1 - args.tailr_gamma)*loss.detach()
+                    denominator = args.tailr_gamma + (1 - args.tailr_gamma)*np.exp(-loss.detach())
                     weight = torch.div(numerator, denominator)
                     weight = torch.maximum(weight, args.tailr_weight_threshold*torch.ones_like(weight))
                     loss = loss * weight 
