@@ -4,11 +4,11 @@ This is the code repository for the paper [Error Norm Truncation: Robust Trainin
 
 ## Getting Started
 
-Machine Translation code are at `./fairseq`
+Machine Translation code is at `./fairseq`
 
-Language Modeling code are at `./language_modeling`
+Language Modeling code is at `./language_modeling`
 
-Text Summarization code are at `./t5_finetune`
+Text Summarization code is at `./t5_finetune`
 
 ## Citation 
 
