@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 ## Baseline 
 ```
-bash train_cnndm.sh
+bash train_cnndm.sh <gpu number>
 ```
 
 ## ENT
