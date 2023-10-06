@@ -1,6 +1,6 @@
 # Error Norm Truncation 
 
-This is the code repository for the paper [Error Norm Truncation: Robust Training in the Presence of Data Noise for Text Generation Models](https://arxiv.org/abs/2310.00840).
+This is the code repository for the paper [Error Norm Truncation: Robust Training in the Presence of Data Noise for Text Generation Models](https://arxiv.org/abs/2310.00840) (Under Construction).
 
 ## Getting Started
 
