@@ -18,15 +18,15 @@ bash opus_8_scripts/preprocess_opus_8.sh <vocab_size>
 ## Training 
 To train a baseline model from English to the eight languages (En-X) and do inference on the test set
 ```
-bash train_opus_8_baseline.sh
+bash opus_8_scripts/train_opus_8_baseline.sh
 ```
 
 To use ENT-Fraction
 ```
-bash train_opus_8_ent_fraction.sh <start truncate iteration> <prune fraction>
+bash opus_8_scripts/train_opus_8_ent_fraction.sh <start truncate iteration> <prune fraction>
 ```
 
 To use ENT-Threshold
 ```
-bash train_opus_8_ent_threshold.sh <start truncate iteration> <prune threshold>
+bash opus_8_scripts/train_opus_8_ent_threshold.sh <start truncate iteration> <prune threshold>
 ```
