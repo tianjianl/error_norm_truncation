@@ -1,5 +1,6 @@
 # Machine Translation
 
+Acknowledgement: The code for machine translation experiments is adapted from https://github.com/yilinyang7/fairseq_multi_fix
 
 ## Getting Started 
 To download and extract the data for all the languages:
